@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Comida Mexicana</title>
+</head>
+<body>
+    <h1>Encuesta de Comida Mexicana</h1>
+    
+    <form method="POST" action="/submit" id="surveyForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="budget">Presupuesto promedio por persona:</label><br>
+        <input type="radio" id="budget1" name="budget" value="Menos de $100 MXN" required> Menos de $100 MXN<br>
+        <input type="radio" id="budget2" name="budget" value="$100 - $250 MXN"> $100 - $250 MXN<br>
+        <input type="radio" id="budget3" name="budget" value="$250 - $400 MXN"> $250 - $400 MXN<br>
+        <input type="radio" id="budget4" name="budget" value="Más de $400 MXN"> Más de $400 MXN<br><br>
+
+        <label for="foodType">¿Qué tipo de comida mexicana consumes con mayor frecuencia en restaurantes?</label><br>
+        <select id="foodType" name="foodType">
+            <option value="Tacos y antojitos">Tacos y antojitos</option>
+            <option value="Platillos regionales">Platillos regionales</option>
+            <option value="Comida gourmet mexicana">Comida gourmet mexicana</option>
+            <option value="Mariscos estilo mexicano">Mariscos estilo mexicano</option>
+            <option value="Otro">Otro</option>
+        </select><br><br>
+
+        <label for="restaurantFavorite">¿Tienes un restaurante favorito?</label><br>
+        <input type="text" id="restaurantFavorite" name="restaurantFavorite"><br><br>
+
+        <!-- Aquí agregas el campo de opinión -->
+        <label for="opinion">¿Qué opinas sobre la comida mexicana?</label><br>
+        <textarea id="opinion" name="opinion" required></textarea><br><br>
+
+        <input type="submit" value="Enviar respuestas">
+    </form>
+
+</body>
+</html>
